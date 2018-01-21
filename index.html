@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link href="assets/css/main.css" rel="stylesheet"> -->
+    <title>Order</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <button>Go back</button>
+            <a href="#">
+                <img src="assets/img/logo.png" alt="logo">
+            </a>
+            <button>Sing in</button>
+        </nav>
+    </header>
+
+    <form>
+        <header>
+            <section>
+                <div>
+                    <h2>Your order</h2>
+                    <table>
+                        <tr>
+                            <th>Items</th>
+                            <th>Details</th>
+                            <th>Price</th>
+                            <th>Delivery</th>
+                        </tr>
+                        <tr>
+                            <td>2 documents</td>
+                            <td>2 languages</td>
+                            <td value="USD:696.00">$ 696.00</td>
+                            <td>48 hours*</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <button type="submit">Place order</button>
+                    <button onclick="window.print()">Print a quote</button>
+                </div>
+            </section>
+            <section>
+                <h2>Help center</h2>
+                <p>If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.</p>
+                <div>
+                    <a href="tel:+9710555555">Phone: +971(0) 555 555</a>
+                    <a href="mailto:help@qtest.com">help@qtest.com</a>
+                </div>
+
+            </section>
+        </header>
+        <main>
+            <fieldset>
+                <h2>Select what you want to translate</h2>
+                <div>
+                    <label>
+                        <input checked type="radio" name="translate" value="website">
+                        <img src="assets/img/website.png" alt="website">
+                    </label>
+                    <label>
+                        <input type="radio" name="translate" value="documents">
+                        <img src="assets/img/documents.png" alt="documents">
+                    </label>
+                    <label>
+                        <input type="radio" name="translate" value="social">
+                        <img src="assets/img/social-accounts.png" alt="social">
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h2>Upload your document
+                    <small>(Doc, Docx, Text, PDF, Markdown)</small>
+                </h2>
+                <label>
+                    <input type="file">
+                </label>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>file name</th>
+                            <th>file size</th>
+                            <th>number of words</th>
+                            <th>remove</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <output name="doc-file-name"> business_operations.docx</output>
+                            </td>
+                            <td>
+                                <output name="doc-size">72kb</output>
+                            </td>
+                            <td>
+                                <output name="doc-length">842</output>
+                            </td>
+                            <td>
+                                <button type="button"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <output name="doc-file-name"> business_financial.docx</output>
+                            </td>
+                            <td>
+                                <output name="doc-size">26kb</output>
+                            </td>
+                            <td>
+                                <output name="doc-length">2,326</output>
+                            </td>
+                            <td>
+                                <button type="button"></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </fieldset>
+            <fieldset>
+                <h2>Choose your languages pairings</h2>
+                <div>
+                    <span>From</span>
+                    <select name="language-from">
+                        <option value="english" selected>English</option>
+                        <option value="danish">Danish</option>
+                        <option value="german">German</option>
+                    </select>
+                </div>
+                <section>
+                    <div>
+                        <span>To</span>
+                        <select name="language-to">
+                            <option value="arabic">Arabic</option>
+                            <option value="english">English</option>
+                            <option value="danish">Danish</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <select name="language-add">
+                            <option value="kurdish">Kurdish</option>
+                            <option value="english">English</option>
+                            <option value="danish">Danish</option>
+                        </select>
+                    </div>
+                    <button type="button"></button>
+                    <button type="button">add</button>
+                </section>
+            </fieldset>
+            <fieldset>
+                <h2>Select your desired tone</h2>
+                <label>
+                    <input type="radio" name="desire" value="casual" checked>
+                    <span>Frendly/Casual</span>
+                </label>
+                <label>
+                    <input type="radio" name="desire" value="pro">
+                    <span>Corporate/Pro</span>
+                </label>
+                <label>
+                    <input type="radio" name="desire" value="formal">
+                    <span>Media/Formal</span>
+                </label>
+            </fieldset>
+            <fieldset>
+                <h2>Tell us how urgent this job is</h2>
+                <input type="range" min="0" max="100" step="50">
+                <span>i got time</span>
+                <span>average</span>
+                <span>yesterday</span>
+                <div>
+                    <h3>timeline info</h3>
+                    <p>With an
+                        <span>Avarage</span> timeline set up, our expert translator can take a reasonable amount of time perfecting
+                        your translation</p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h2>Sign up an choose a payment methods</h2>
+                <p>Already have an account with us?
+                    <a href="#">Sign in.</a>
+                </p>
+                <label>
+                    <span>full name</span>
+                    <input type="text" name="name" required>
+                    <!-- <img src="assets/img/tick.png" alt="valid"> -->
+                    <!-- <img src="assets/img/invalid.png" alt="invalid"> -->
+                </label>
+
+                <label>
+                    <span>email adress</span>
+                    <input type="email" name="email" required>
+                    <!-- <img src="assets/img/tick.png" alt="valid"> -->
+                    <!-- <img src="assets/img/invalid.png" alt="invalid"> -->
+                </label>
+
+                <label>
+                    <span>choose a password</span>
+                    <input type="password" name="password" pattern=".{5,10}" title="5 to 10 characters" required>
+                    <!-- <img src="assets/img/tick.png" alt="valid"> -->
+                    <!-- <img src="assets/img/invalid.png" alt="invalid"> -->
+                </label>
+
+                <section>
+                    <label>
+                        <input type="radio" name="payment" value="visa" />
+                        <!-- <img src="assets/img/payment-1.png"> -->
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="paypal" />
+                        <!-- <img src="assets/img/payment-2.png"> -->
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="amazon" />
+                        <!-- <img src="assets/img/payment-3.png"> -->
+                    </label>
+                </section>
+
+                <label>
+                    <span>card number</span>
+                    <input name="cnum" type="number" required>
+                </label>
+
+                <label>
+                    <span>expiry date</span>
+                    <input name="cdate" type="number" required>
+                </label>
+
+                <label>
+                    <span>code</span>
+                    <input name="ccvc" type="number" required>
+                </label>
+
+                <section>
+                    <label>
+                        <input type="checkbox" required>
+                        <span>I agree to the</span>
+                        <a href="#">Terms &amp; Conditions</a>
+                    </label>
+                    <button type="submit">place order</button>
+                    <button onclick="window.print()">print a quote</button>
+                </section>
+            </fieldset>
+        </main>
+    </form>
+
+    <footer>
+        <aside>
+            <h2>What we do</h2>
+            <em>We provide a full range of language services including content development, document, website and social media
+                accounts translations.</em>
+        </aside>
+        <aside>
+            <h2>Our main office</h2>
+            <span>Dubai, UAE</span>
+            <address>P.O. Box: 502735</address>
+            <a href="tel:+971044278128">Phone: +971(0) 44278128</a>
+        </aside>
+        <aside>
+            <h2>Connect with us</h2>
+            <ul>
+                <li>
+                    <a href="#">Facebook</a>
+                </li>
+                <li>
+                    <a href="#">Twitter</a>
+                </li>
+                <li>
+                    <a href="#">Linkedin</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- <img src="assets/img/logo.png" alt="logo"> -->
+    </footer>
+</body>
+
+</html>

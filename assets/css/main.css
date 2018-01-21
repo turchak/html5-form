@@ -1,0 +1,699 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+  .icon-arrow-left:before {
+    content: "\e900";
+  }
+  .icon-cc-visa:before {
+    content: "\e901";
+  }
+  .icon-checkmark-circled:before {
+    content: "\e902";
+  }
+  .icon-clipboard:before {
+    content: "\e903";
+  }
+  .icon-close-circled:before {
+    content: "\e904";
+  }
+  .icon-comments:before {
+    content: "\e905";
+  }
+  .icon-compass:before {
+    content: "\e906";
+  }
+  .icon-document-text:before {
+    content: "\e907";
+  }
+  .icon-facebook:before {
+    content: "\e908";
+  }
+  .icon-heart:before {
+    content: "\e909";
+  }
+  .icon-help-buoy:before {
+    content: "\e90a";
+  }
+  .icon-information-circled:before {
+    content: "\e90b";
+  }
+  .icon-linkedin:before {
+    content: "\e90c";
+  }
+  .icon-person:before {
+    content: "\e90d";
+  }
+  .icon-share-alt:before {
+    content: "\e90e";
+  }
+  .icon-speakerphone:before {
+    content: "\e90f";
+  }
+  .icon-suitcase:before {
+    content: "\e910";
+  }
+  .icon-trash-b:before {
+    content: "\e911";
+  }
+  .icon-twitter:before {
+    content: "\e912";
+  }
+  .icon-upload:before {
+    content: "\e913";
+  } */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?vadg2k");
+  src: url("../fonts/icomoon.eot?vadg2k#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?vadg2k") format("truetype"), url("../fonts/icomoon.woff?vadg2k") format("woff"), url("../fonts/icomoon.svg?vadg2k#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button::before,
+h2::before,
+input::before,
+label::before,
+label::after,
+output::before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 600;
+}
+
+a:link {
+  color: #373146;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #605971;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: #605971;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+html {
+  height: 100%;
+  background: #eceef4;
+}
+
+h2 {
+  position: relative;
+  text-transform: uppercase;
+  color: #6e768f;
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  line-height: 1.4;
+}
+
+button {
+  position: relative;
+  width: 165px;
+  height: 50px;
+  background: #eceef4;
+  border-radius: 4px;
+  border: 1px #ccd3e3 solid;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #9ca0bf;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s box-shadow ease-in;
+}
+
+button:hover {
+  box-shadow: 2px 3px 5px 0px rgba(46, 61, 73, 0.15);
+}
+
+body {
+  max-width: 1170px;
+  min-height: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  color: #6d6d7d;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
+
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body header nav a {
+  width: 100px;
+  height: 100px;
+  margin: 70px 0;
+}
+
+body header nav button::before {
+  content: "\e900";
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+body header nav button:last-child::before {
+  content: "\e90d";
+}
+
+form {
+  background: #fff;
+  border-radius: 4px;
+  border: 1px #ccd3e3 solid;
+}
+
+form header {
+  display: flex;
+  border-bottom: 1px #ccd3e3 solid;
+}
+
+form header section {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 355px);
+  padding: 25px 35px 25px 70px;
+}
+
+form header section h2::before {
+  content: "\e903";
+  position: absolute;
+  left: -30px;
+  font-size: 20px;
+  transform: translateY(-10%);
+}
+
+form header section:last-child h2::before {
+  content: "\e90a";
+}
+
+form header section:last-child {
+  flex-direction: column;
+  width: 355px;
+  border-left: 1px #ccd3e3 solid;
+}
+
+form header section:last-child div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+form header section:last-child div a:last-child {
+  margin-left: 10px;
+}
+
+form header table {
+  margin: 35px 0 25px;
+  width: 100%;
+  text-align: left;
+}
+
+form header tr {
+  display: flex;
+}
+
+form header th {
+  width: 25%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+form header td {
+  width: 25%;
+  margin-top: 15px;
+}
+
+form div:first-child {
+  width: 100%;
+}
+
+form div:last-child {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 110px 0 130px;
+}
+
+main fieldset:nth-child(1) h2 {
+  padding: 105px 0 85px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  text-align: center;
+}
+
+main fieldset:nth-child(1) div {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 110px;
+}
+
+main fieldset:nth-child(1) div label {
+  position: relative;
+  width: 280px;
+  height: 201px;
+}
+
+main fieldset:nth-child(1) div label input {
+  all: unset;
+  display: block;
+  z-index: 1;
+}
+
+main fieldset:nth-child(1) div label input:checked {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 7px #76a7e1 solid;
+  box-sizing: border-box;
+}
+
+main fieldset:nth-child(1) div label input:checked::before {
+  content: "\e902";
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #76a7e1;
+}
+
+main fieldset:nth-child(1) div label img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+main fieldset:nth-child(2) h2 {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: unset;
+}
+
+main fieldset:nth-child(2) h2 small {
+  margin-left: 15px;
+  font-size: 12px;
+}
+
+main fieldset:nth-child(2) label {
+  position: relative;
+  display: inline-block;
+  width: 235px;
+  height: 50px;
+  margin: 60px 0 40px;
+  background: #eceef4;
+  border-radius: 4px;
+  border: 1px #ccd3e3 solid;
+}
+
+main fieldset:nth-child(2) label::before {
+  content: "\e913";
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+main fieldset:nth-child(2) label::after {
+  content: 'Upload a new file';
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  font-family: "Opens Sans", sans-serif;
+  font-size: 14px;
+}
+
+main fieldset:nth-child(2) label input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+main fieldset:nth-child(2) div {
+  padding: 30px 45px;
+  border: 1px #ccd3e3 solid;
+  border-radius: 3px;
+}
+
+main fieldset:nth-child(2) table {
+  width: 100%;
+  text-align: left;
+}
+
+main fieldset:nth-child(2) table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+main fieldset:nth-child(2) table tr td:first-child output {
+  position: relative;
+  margin-left: 20px;
+}
+
+main fieldset:nth-child(2) table tr td:first-child output::before {
+  content: "\e907";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  font-size: 15px;
+}
+
+main fieldset:nth-child(2) table th {
+  text-transform: uppercase;
+}
+
+main fieldset:nth-child(2) table th,
+main fieldset:nth-child(2) table td {
+  width: 20%;
+  height: 30px;
+}
+
+main fieldset:nth-child(2) table th:first-child,
+main fieldset:nth-child(2) table td:first-child {
+  width: 40%;
+}
+
+main fieldset:nth-child(2) table th button,
+main fieldset:nth-child(2) table td button {
+  all: unset;
+  position: relative;
+  width: 100%;
+  height: 25px;
+  cursor: pointer;
+}
+
+main fieldset:nth-child(2) table th button::before,
+main fieldset:nth-child(2) table td button::before {
+  content: "\e911";
+  position: absolute;
+  top: 0;
+  font-size: 15px;
+}
+
+main fieldset:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 115px;
+}
+
+main fieldset:nth-child(3) h2 {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: unset;
+}
+
+main fieldset:nth-child(3) > div {
+  margin-top: 50px;
+}
+
+main fieldset:nth-child(3) div {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin-left: 50px;
+}
+
+main fieldset:nth-child(3) div::before {
+  content: '';
+  position: absolute;
+  right: 50px;
+  top: 0;
+  display: block;
+  width: 2px;
+  height: 100%;
+  background: #ccd3e3;
+  pointer-events: none;
+}
+
+main fieldset:nth-child(3) div::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  border-style: solid;
+  border-width: 5px 3px 0 3px;
+  border-color: #9199b8 transparent transparent transparent;
+  pointer-events: none;
+}
+
+main fieldset:nth-child(3) div span {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
+
+main fieldset:nth-child(3) div span:last-child {
+  left: -30px;
+}
+
+main fieldset:nth-child(3) div select {
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  background: #eceef4;
+  border-radius: 4px;
+  border: 1px #ccd3e3 solid;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+main fieldset:nth-child(3) div select option {
+  width: 200px;
+  height: 50px;
+}
+
+main fieldset:nth-child(3) section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+main fieldset:nth-child(3) section div:nth-child(2) {
+  margin-left: 30px;
+}
+
+main fieldset:nth-child(3) section button {
+  position: relative;
+  width: 120px;
+  padding-left: 55px;
+  text-align: left;
+}
+
+main fieldset:nth-child(3) section button::before {
+  content: "\e90b";
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+main fieldset:nth-child(3) section div + button {
+  all: unset;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+main fieldset:nth-child(3) section div + button::before {
+  content: "\e911";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+
+main fieldset:nth-child(4) h2 {
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=main.css.map */

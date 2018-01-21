@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import 'reset';
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?vadg2k');
+  src: url('../fonts/icomoon.eot?vadg2k#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?vadg2k') format('truetype'), url('../fonts/icomoon.woff?vadg2k') format('woff'), url('../fonts/icomoon.svg?vadg2k#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button::before,
+h2::before,
+input::before,
+label::before,
+label::after,
+output::before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 600;
+
+  &:link {
+    color: #373146;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: #605971;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: #605971;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+}
+
+html {
+  height: 100%;
+  background: #eceef4;
+}
+
+h2 {
+  position: relative;
+  text-transform: uppercase;
+  color: #6e768f;
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  line-height: 1.4;
+}
+
+button {
+  position: relative;
+  width: 165px;
+  height: 50px;
+  background: #eceef4;
+  border-radius: 4px;
+  border: 1px #ccd3e3 solid;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #9ca0bf;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s box-shadow ease-in;
+
+  &:hover {
+    box-shadow: 2px 3px 5px 0px rgba(46, 61, 73, 0.15)
+  }
+}
+
+body {
+  max-width: 1170px;
+  min-height: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  color: #6d6d7d;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+
+  & header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & a {
+      width: 100px;
+      height: 100px;
+      margin: 70px 0;
+    }
+
+    & button::before {
+      content: "\e900";
+      font-size: 22px;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+    }
+
+    & button:last-child::before {
+      content: "\e90d";
+    }
+  }
+}
+
+form {
+  background: #fff;
+  border-radius: 4px;
+  border: 1px #ccd3e3 solid;
+
+  & header {
+    display: flex;
+    border-bottom: 1px #ccd3e3 solid;
+
+    & section {
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - 355px);
+      padding: 25px 35px 25px 70px;
+
+      & h2::before {
+        content: "\e903";
+        position: absolute;
+        left: -30px;
+        font-size: 20px;
+        transform: translateY(-10%);
+      }
+
+      &:last-child h2::before {
+        content: "\e90a";
+      }
+
+      &:last-child {
+        flex-direction: column;
+        width: 355px;
+        border-left: 1px #ccd3e3 solid;
+
+        & div {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+
+          & a:last-child {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    & table {
+      margin: 35px 0 25px;
+      width: 100%;
+      text-align: left;
+    }
+
+    & tr {
+      display: flex;
+    }
+
+    & th {
+      width: 25%;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    & td {
+      width: 25%;
+      margin-top: 15px;
+    }
+  }
+
+  & div:first-child {
+    width: 100%;
+  }
+
+  & div:last-child {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  & fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 110px 0 130px;
+
+    &:nth-child(1) {
+
+      & h2 {
+        padding: 105px 0 85px;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 2.5px;
+        text-align: center;
+      }
+  
+      & div {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 110px;
+  
+        & label {
+          position: relative;
+          width: 280px;
+          height: 201px;
+  
+          & input {
+            all: unset;
+            display: block;
+            z-index: 1;
+  
+            &:checked {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              border-radius: 4px;
+              border: 7px #76a7e1 solid;
+              box-sizing: border-box;
+  
+              &::before {
+                content: "\e902";
+                position: absolute;
+                top: -13px;
+                right: -13px;
+                display: block;
+                background: #fff;
+                border-radius: 50%;
+                font-size: 25px;
+                color: #76a7e1;
+              }
+            }
+          }
+  
+          & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+  
+      & h2 {
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: unset;
+  
+        & small {
+          margin-left: 15px;
+          font-size: 12px;
+        }
+      }
+  
+      & label {
+        position: relative;
+        display: inline-block;
+        width: 235px;
+        height: 50px;
+        margin: 60px 0 40px;
+        background: #eceef4;
+        border-radius: 4px;
+        border: 1px #ccd3e3 solid;
+  
+        &::before {
+          content: "\e913";
+          position: absolute;
+          top: 50%;
+          left: 30px;
+          transform: translateY(-50%);
+          font-size: 20px;
+        }
+  
+        &::after {
+          content: 'Upload a new file';
+          position: absolute;
+          top: 50%;
+          left: 60px;
+          transform: translateY(-50%);
+          font-family: "Opens Sans", sans-serif;
+          font-size: 14px;
+        }
+  
+        & input {
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+      }
+  
+      & div {
+        padding: 30px 45px;
+        border: 1px #ccd3e3 solid;
+        border-radius: 3px;
+      }
+  
+      & table {
+        width: 100%;
+        text-align: left;
+  
+        & tr {
+          display: flex;
+          justify-content: space-between;
+  
+          & td:first-child {
+  
+            & output {
+              position: relative;
+              margin-left: 20px;
+  
+              &::before {
+                content: "\e907";
+                position: absolute;
+                top: 50%;
+                left: -20px;
+                transform: translateY(-50%);
+                font-size: 15px;
+              }
+            }
+          }
+        }
+  
+        & th {
+          text-transform: uppercase;
+        }
+  
+        & th,
+        td {
+          width: 20%;
+          height: 30px;
+  
+          &:first-child {
+            width: 40%;
+          }
+  
+          & button {
+            all: unset;
+            position: relative;
+            width: 100%;
+            height: 25px;
+            cursor: pointer;
+  
+            &::before {
+              content: "\e911";
+              position: absolute;
+              top: 0;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+    
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      padding-top: 115px;
+  
+      & h2 {
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: unset;
+      }
+
+      & > div {
+        margin-top: 50px;
+      }
+
+      & div {
+        position: relative;
+        width: 200px;
+        height: 50px;
+        margin-left: 50px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          right: 50px;
+          top: 0;
+          display: block;
+          width: 2px;
+          height: 100%;
+          background: #ccd3e3;
+          pointer-events: none;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 25px;
+          border-style: solid;
+          border-width: 5px 3px 0 3px;
+          border-color: #9199b8 transparent transparent transparent;
+          pointer-events: none;
+        }
+
+        & span {
+          position: absolute;
+          top: 50%;
+          left: -50px;
+          transform: translateY(-50%);
+          text-transform: uppercase;
+
+          &:last-child {
+            left: -30px;
+          }
+        }
+
+        & select {
+          appearance:none;
+          -moz-appearance:none; /* Firefox */
+          -webkit-appearance:none; /* Safari and Chrome */
+          width: 100%;
+          height: 100%;
+          padding-left: 50px;
+          background: #eceef4;
+          border-radius: 4px;
+          border: 1px #ccd3e3 solid;
+          font-family: "Open Sans", sans-serif;
+          font-size: 20px;
+
+          & option {
+            width: 200px;
+            height: 50px;
+          }
+        }
+      }
+
+      & section {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+
+
+        & div:nth-child(2) {
+          margin-left: 30px;
+        }
+
+        & button {
+          position: relative;
+          width: 120px;
+          padding-left: 55px;
+          text-align: left;
+
+          &::before {
+            content: "\e90b";
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        & div + button {
+          all: unset; 
+          position: relative;
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+                  
+          &::before {
+            content: "\e911";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    &:nth-child(4) {
+  
+      & h2 {
+        text-transform: uppercase;
+  
+      }
+    }
+  }
+}
