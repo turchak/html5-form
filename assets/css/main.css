@@ -224,6 +224,11 @@ button:hover {
   box-shadow: 2px 3px 10px 0 rgba(150, 161, 170, 0.15);
 }
 
+button[type=submit] {
+  background: #5fcac6;
+  color: #fff;
+}
+
 body {
   min-height: 100%;
   color: #6d6d7d;
@@ -259,6 +264,10 @@ body header nav button::before {
 
 body header nav button:last-child::before {
   content: "\e90d";
+}
+
+body {
+  counter-reset: section;
 }
 
 form {
@@ -346,6 +355,7 @@ main {
 }
 
 main > fieldset {
+  position: relative;
   margin: 0 110px 0 130px;
 }
 
@@ -393,6 +403,10 @@ main > fieldset:nth-child(1) div label input {
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+main > fieldset:nth-child(1) div label input:focus {
+  outline: 1px solid #76a7e1;
 }
 
 main > fieldset:nth-child(1) div label input:checked {
@@ -525,6 +539,27 @@ main > fieldset:nth-child(2) table td button::before {
   font-size: 15px;
 }
 
+main > fieldset:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: -70px;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: 1px #757d95 solid;
+  border-radius: 50%;
+}
+
+main > fieldset:nth-child(2)::after {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  top: 0;
+  left: -53px;
+  font-size: 20px;
+}
+
 main > fieldset:nth-child(3) {
   margin-top: 115px;
 }
@@ -645,6 +680,27 @@ main > fieldset:nth-child(3) section div + button::before {
   font-size: 15px;
 }
 
+main > fieldset:nth-child(3)::before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: -70px;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: 1px #757d95 solid;
+  border-radius: 50%;
+}
+
+main > fieldset:nth-child(3)::after {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  top: 0;
+  left: -53px;
+  font-size: 20px;
+}
+
 main > fieldset:nth-child(4) {
   margin-top: 105px;
 }
@@ -662,6 +718,7 @@ main > fieldset:nth-child(4) div h2 {
 }
 
 main > fieldset:nth-child(4) div section {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -902,6 +959,27 @@ main > fieldset:nth-child(4) div section:nth-child(2) legend strong {
   color: #edbe76;
 }
 
+main > fieldset:nth-child(4) div section::before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: -70px;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: 1px #757d95 solid;
+  border-radius: 50%;
+}
+
+main > fieldset:nth-child(4) div section::after {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  top: 0;
+  left: -53px;
+  font-size: 20px;
+}
+
 main > fieldset:nth-child(5) {
   margin-top: 105px;
 }
@@ -997,6 +1075,27 @@ main > fieldset:nth-child(5) div label input:focus:invalid ~ div::before {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main > fieldset:nth-child(5)::before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: -70px;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: 1px #757d95 solid;
+  border-radius: 50%;
+}
+
+main > fieldset:nth-child(5)::after {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  top: 0;
+  left: -53px;
+  font-size: 20px;
 }
 
 main > fieldset:nth-child(6) {
