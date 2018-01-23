@@ -1,88 +1,84 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
+header,
+hgroup,
+html,
+i,
+iframe,
 img,
 ins,
 kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
 q,
+ruby,
 s,
 samp,
+section,
 small,
+span,
 strike,
 strong,
 sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
 summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
 time,
-mark,
-audio,
+tr,
+tt,
+u,
+ul,
+var,
 video {
   margin: 0;
   padding: 0;
@@ -120,10 +116,10 @@ q {
   quotes: none;
 }
 
-blockquote:before,
 blockquote:after,
-q:before,
-q:after {
+blockquote:before,
+q:after,
+q:before {
   content: '';
   content: none;
 }
@@ -133,67 +129,6 @@ table {
   border-spacing: 0;
 }
 
-/* 
-  .icon-arrow-left:before {
-    content: "\e900";
-  }
-  .icon-cc-visa:before {
-    content: "\e901";
-  }
-  .icon-checkmark-circled:before {
-    content: "\e902";
-  }
-  .icon-clipboard:before {
-    content: "\e903";
-  }
-  .icon-close-circled:before {
-    content: "\e904";
-  }
-  .icon-comments:before {
-    content: "\e905";
-  }
-  .icon-compass:before {
-    content: "\e906";
-  }
-  .icon-document-text:before {
-    content: "\e907";
-  }
-  .icon-facebook:before {
-    content: "\e908";
-  }
-  .icon-heart:before {
-    content: "\e909";
-  }
-  .icon-help-buoy:before {
-    content: "\e90a";
-  }
-  .icon-information-circled:before {
-    content: "\e90b";
-  }
-  .icon-linkedin:before {
-    content: "\e90c";
-  }
-  .icon-person:before {
-    content: "\e90d";
-  }
-  .icon-share-alt:before {
-    content: "\e90e";
-  }
-  .icon-speakerphone:before {
-    content: "\e90f";
-  }
-  .icon-suitcase:before {
-    content: "\e910";
-  }
-  .icon-trash-b:before {
-    content: "\e911";
-  }
-  .icon-twitter:before {
-    content: "\e912";
-  }
-  .icon-upload:before {
-    content: "\e913";
-  } */
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?vadg2k");
@@ -208,10 +143,15 @@ table {
 
 button::before,
 h2::before,
+h3::before,
 input::before,
-label::before,
 label::after,
-output::before {
+label::before,
+li::after,
+li::before,
+output::before,
+span::after,
+span::before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -271,7 +211,7 @@ button {
   height: 50px;
   background: #eceef4;
   border-radius: 4px;
-  border: 1px #ccd3e3 solid;
+  border: 1px #dadde7 solid;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   color: #9ca0bf;
@@ -281,17 +221,19 @@ button {
 }
 
 button:hover {
-  box-shadow: 2px 3px 5px 0px rgba(46, 61, 73, 0.15);
+  box-shadow: 2px 3px 10px 0 rgba(150, 161, 170, 0.15);
 }
 
 body {
-  max-width: 1170px;
   min-height: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
   color: #6d6d7d;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
+}
+
+body header {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 body header nav {
@@ -320,6 +262,8 @@ body header nav button:last-child::before {
 }
 
 form {
+  max-width: 1140px;
+  margin: 0 auto;
   background: #fff;
   border-radius: 4px;
   border: 1px #ccd3e3 solid;
@@ -330,14 +274,14 @@ form header {
   border-bottom: 1px #ccd3e3 solid;
 }
 
-form header section {
+form header > section {
   display: flex;
   justify-content: space-between;
   width: calc(100% - 355px);
   padding: 25px 35px 25px 70px;
 }
 
-form header section h2::before {
+form header > section h2::before {
   content: "\e903";
   position: absolute;
   left: -30px;
@@ -345,24 +289,34 @@ form header section h2::before {
   transform: translateY(-10%);
 }
 
-form header section:last-child h2::before {
+form header > section:last-child h2::before {
   content: "\e90a";
 }
 
-form header section:last-child {
+form header > section:last-child {
   flex-direction: column;
   width: 355px;
   border-left: 1px #ccd3e3 solid;
 }
 
-form header section:last-child div {
+form header > section:last-child div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-form header section:last-child div a:last-child {
+form header > section:last-child div a:last-child {
   margin-left: 10px;
+}
+
+form header > section div:nth-child(1) {
+  width: 100%;
+}
+
+form header > section div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 form header table {
@@ -386,29 +340,16 @@ form header td {
   margin-top: 15px;
 }
 
-form div:first-child {
-  width: 100%;
-}
-
-form div:last-child {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
 main {
   display: flex;
   flex-direction: column;
 }
 
-main fieldset {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+main > fieldset {
   margin: 0 110px 0 130px;
 }
 
-main fieldset:nth-child(1) h2 {
+main > fieldset:nth-child(1) h2 {
   padding: 105px 0 85px;
   font-size: 20px;
   font-weight: 300;
@@ -416,39 +357,58 @@ main fieldset:nth-child(1) h2 {
   text-align: center;
 }
 
-main fieldset:nth-child(1) div {
+main > fieldset:nth-child(1) div {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 110px;
 }
 
-main fieldset:nth-child(1) div label {
+main > fieldset:nth-child(1) div label {
   position: relative;
-  width: 280px;
+  width: calc(280 / 900 * 100%);
   height: 201px;
+  cursor: pointer;
 }
 
-main fieldset:nth-child(1) div label input {
+main > fieldset:nth-child(1) div label:nth-child(1) input {
+  background: url("../img/website.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+main > fieldset:nth-child(1) div label:nth-child(2) input {
+  background: url("../img/documents.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+main > fieldset:nth-child(1) div label:nth-child(3) input {
+  background: url("../img/social-accounts.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+main > fieldset:nth-child(1) div label input {
   all: unset;
   display: block;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 }
 
-main fieldset:nth-child(1) div label input:checked {
+main > fieldset:nth-child(1) div label input:checked {
   position: relative;
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  border: 7px #76a7e1 solid;
+  box-shadow: inset 0 0 0 7px #76a7e1;
   box-sizing: border-box;
 }
 
-main fieldset:nth-child(1) div label input:checked::before {
+main > fieldset:nth-child(1) div label input:checked::before {
   content: "\e902";
   position: absolute;
-  top: -13px;
-  right: -13px;
+  top: -7px;
+  right: -7px;
   display: block;
   background: #fff;
   border-radius: 50%;
@@ -456,25 +416,18 @@ main fieldset:nth-child(1) div label input:checked::before {
   color: #76a7e1;
 }
 
-main fieldset:nth-child(1) div label img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-main fieldset:nth-child(2) h2 {
+main > fieldset:nth-child(2) h2 {
   font-size: 20px;
   font-weight: 300;
   text-transform: unset;
 }
 
-main fieldset:nth-child(2) h2 small {
+main > fieldset:nth-child(2) h2 small {
   margin-left: 15px;
   font-size: 12px;
 }
 
-main fieldset:nth-child(2) label {
+main > fieldset:nth-child(2) label {
   position: relative;
   display: inline-block;
   width: 235px;
@@ -485,7 +438,7 @@ main fieldset:nth-child(2) label {
   border: 1px #ccd3e3 solid;
 }
 
-main fieldset:nth-child(2) label::before {
+main > fieldset:nth-child(2) label::before {
   content: "\e913";
   position: absolute;
   top: 50%;
@@ -494,7 +447,7 @@ main fieldset:nth-child(2) label::before {
   font-size: 20px;
 }
 
-main fieldset:nth-child(2) label::after {
+main > fieldset:nth-child(2) label::after {
   content: 'Upload a new file';
   position: absolute;
   top: 50%;
@@ -504,34 +457,34 @@ main fieldset:nth-child(2) label::after {
   font-size: 14px;
 }
 
-main fieldset:nth-child(2) label input {
+main > fieldset:nth-child(2) label input {
   width: 100%;
   height: 100%;
   opacity: 0;
 }
 
-main fieldset:nth-child(2) div {
+main > fieldset:nth-child(2) div {
   padding: 30px 45px;
   border: 1px #ccd3e3 solid;
   border-radius: 3px;
 }
 
-main fieldset:nth-child(2) table {
+main > fieldset:nth-child(2) table {
   width: 100%;
   text-align: left;
 }
 
-main fieldset:nth-child(2) table tr {
+main > fieldset:nth-child(2) table tr {
   display: flex;
   justify-content: space-between;
 }
 
-main fieldset:nth-child(2) table tr td:first-child output {
+main > fieldset:nth-child(2) table tr td:first-child output {
   position: relative;
   margin-left: 20px;
 }
 
-main fieldset:nth-child(2) table tr td:first-child output::before {
+main > fieldset:nth-child(2) table tr td:first-child output::before {
   content: "\e907";
   position: absolute;
   top: 50%;
@@ -540,23 +493,23 @@ main fieldset:nth-child(2) table tr td:first-child output::before {
   font-size: 15px;
 }
 
-main fieldset:nth-child(2) table th {
+main > fieldset:nth-child(2) table th {
   text-transform: uppercase;
 }
 
-main fieldset:nth-child(2) table th,
-main fieldset:nth-child(2) table td {
+main > fieldset:nth-child(2) table th,
+main > fieldset:nth-child(2) table td {
   width: 20%;
   height: 30px;
 }
 
-main fieldset:nth-child(2) table th:first-child,
-main fieldset:nth-child(2) table td:first-child {
+main > fieldset:nth-child(2) table th:first-child,
+main > fieldset:nth-child(2) table td:first-child {
   width: 40%;
 }
 
-main fieldset:nth-child(2) table th button,
-main fieldset:nth-child(2) table td button {
+main > fieldset:nth-child(2) table th button,
+main > fieldset:nth-child(2) table td button {
   all: unset;
   position: relative;
   width: 100%;
@@ -564,38 +517,36 @@ main fieldset:nth-child(2) table td button {
   cursor: pointer;
 }
 
-main fieldset:nth-child(2) table th button::before,
-main fieldset:nth-child(2) table td button::before {
+main > fieldset:nth-child(2) table th button::before,
+main > fieldset:nth-child(2) table td button::before {
   content: "\e911";
   position: absolute;
   top: 0;
   font-size: 15px;
 }
 
-main fieldset:nth-child(3) {
-  display: flex;
-  flex-direction: column;
-  padding-top: 115px;
+main > fieldset:nth-child(3) {
+  margin-top: 115px;
 }
 
-main fieldset:nth-child(3) h2 {
+main > fieldset:nth-child(3) h2 {
   font-size: 20px;
   font-weight: 300;
   text-transform: unset;
 }
 
-main fieldset:nth-child(3) > div {
+main > fieldset:nth-child(3) > div {
   margin-top: 50px;
 }
 
-main fieldset:nth-child(3) div {
+main > fieldset:nth-child(3) div {
   position: relative;
   width: 200px;
   height: 50px;
   margin-left: 50px;
 }
 
-main fieldset:nth-child(3) div::before {
+main > fieldset:nth-child(3) div::before {
   content: '';
   position: absolute;
   right: 50px;
@@ -607,7 +558,7 @@ main fieldset:nth-child(3) div::before {
   pointer-events: none;
 }
 
-main fieldset:nth-child(3) div::after {
+main > fieldset:nth-child(3) div::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -618,7 +569,7 @@ main fieldset:nth-child(3) div::after {
   pointer-events: none;
 }
 
-main fieldset:nth-child(3) div span {
+main > fieldset:nth-child(3) div span {
   position: absolute;
   top: 50%;
   left: -50px;
@@ -626,11 +577,11 @@ main fieldset:nth-child(3) div span {
   text-transform: uppercase;
 }
 
-main fieldset:nth-child(3) div span:last-child {
+main > fieldset:nth-child(3) div span:last-child {
   left: -30px;
 }
 
-main fieldset:nth-child(3) div select {
+main > fieldset:nth-child(3) div select {
   appearance: none;
   -moz-appearance: none;
   /* Firefox */
@@ -643,32 +594,33 @@ main fieldset:nth-child(3) div select {
   border-radius: 4px;
   border: 1px #ccd3e3 solid;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-main fieldset:nth-child(3) div select option {
+main > fieldset:nth-child(3) div select option {
   width: 200px;
   height: 50px;
 }
 
-main fieldset:nth-child(3) section {
+main > fieldset:nth-child(3) section {
   display: flex;
   flex-direction: row;
   margin-top: 40px;
 }
 
-main fieldset:nth-child(3) section div:nth-child(2) {
+main > fieldset:nth-child(3) section div:nth-child(2) {
   margin-left: 30px;
 }
 
-main fieldset:nth-child(3) section button {
+main > fieldset:nth-child(3) section button {
   position: relative;
   width: 120px;
   padding-left: 55px;
   text-align: left;
 }
 
-main fieldset:nth-child(3) section button::before {
+main > fieldset:nth-child(3) section button::before {
   content: "\e90b";
   position: absolute;
   left: 30px;
@@ -676,7 +628,7 @@ main fieldset:nth-child(3) section button::before {
   transform: translateY(-50%);
 }
 
-main fieldset:nth-child(3) section div + button {
+main > fieldset:nth-child(3) section div + button {
   all: unset;
   position: relative;
   width: 50px;
@@ -684,7 +636,7 @@ main fieldset:nth-child(3) section div + button {
   cursor: pointer;
 }
 
-main fieldset:nth-child(3) section div + button::before {
+main > fieldset:nth-child(3) section div + button::before {
   content: "\e911";
   position: absolute;
   top: 50%;
@@ -693,7 +645,617 @@ main fieldset:nth-child(3) section div + button::before {
   font-size: 15px;
 }
 
-main fieldset:nth-child(4) h2 {
+main > fieldset:nth-child(4) {
+  margin-top: 105px;
+}
+
+main > fieldset:nth-child(4) div {
+  display: flex;
+  flex-direction: row;
+}
+
+main > fieldset:nth-child(4) div h2 {
+  text-transform: unset;
+  margin-bottom: 45px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+main > fieldset:nth-child(4) div section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(1) label {
+  position: relative;
+  width: 237px;
+  height: 72px;
+  margin-bottom: 20px;
+  background: #eceef4;
+  border-radius: 4px;
+  border: 1px #ccd3e3 solid;
+  cursor: pointer;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(1) label input {
+  all: unset;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  outline: #76a7e1;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(1) label input:checked {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 7px #76a7e1 solid;
+  box-sizing: border-box;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(1) label input:checked::before {
+  content: "\e902";
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #76a7e1;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(1) label span {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(1) label:nth-child(2) > span::after {
+  content: "\e905";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(1) label:nth-child(3) > span::after {
+  content: "\e910";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(1) label:nth-child(4) > span::after {
+  content: "\e90f";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) h2 {
+  padding-left: 70px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) input[type=range] {
+  position: relative;
+  align-self: center;
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  width: 80%;
+  height: 10px;
+  outline: transparent;
+  cursor: pointer;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) input[type=range]::-webkit-slider-thumb {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #edbe76;
+  z-index: 2;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) input[type=range]::-moz-range-thumb {
+  position: relative;
+  top: 50%;
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #edbe76;
+  z-index: 2;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) input[type=range]::-ms-thumb {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #edbe76;
+  z-index: 2;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) input[type=range]::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d6d8e2;
+  z-index: 1;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) input[type=range]::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d6d8e2;
+  z-index: 1;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) input[type=range]::-webkit-slider-runnable-track {
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  width: 100%;
+  background: #eff0f5;
+  height: 100%;
+  border-radius: 5px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) input[type=range]::-moz-range-track {
+  position: relative;
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  width: 100%;
+  background: #eff0f5;
+  height: 100%;
+  border-radius: 5px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) input[type=range]::-ms-track {
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  width: 100%;
+  background: #eff0f5;
+  height: 100%;
+  border-radius: 5px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) div {
+  display: flex;
+  justify-content: space-between;
   text-transform: uppercase;
+  margin-top: 20px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) legend {
+  margin-top: 60px;
+  padding: 30px 45px 30px 65px;
+  border: 1px #eff0f5 solid;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) legend h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) legend h3::before {
+  content: "\e90b";
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+main > fieldset:nth-child(4) div section:nth-child(2) legend strong {
+  text-transform: uppercase;
+  color: #edbe76;
+}
+
+main > fieldset:nth-child(5) {
+  margin-top: 105px;
+}
+
+main > fieldset:nth-child(5) h2 {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: unset;
+}
+
+main > fieldset:nth-child(5) p {
+  margin: 60px 0 15px;
+}
+
+main > fieldset:nth-child(5) div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main > fieldset:nth-child(5) div label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+main > fieldset:nth-child(5) div label:nth-child(2) {
+  width: 50%;
+}
+
+main > fieldset:nth-child(5) div label:nth-child(3) {
+  width: 50%;
+}
+
+main > fieldset:nth-child(5) div label span {
+  text-transform: uppercase;
+  padding: 35px 0 10px 10px;
+}
+
+main > fieldset:nth-child(5) div label fieldset {
+  position: relative;
+  display: inline-block;
+}
+
+main > fieldset:nth-child(5) div label div {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 50px;
+}
+
+main > fieldset:nth-child(5) div label input {
+  width: 300px;
+  height: 50px;
+  padding: 15px;
+  border: 2px #eff0f5 solid;
+  border-radius: 4px;
+}
+
+main > fieldset:nth-child(5) div label input:valid ~ div::before {
+  content: "\e902";
+  position: absolute;
+  top: 50%;
+  left: 270px;
+  transform: translateY(-50%);
+  font-family: 'icomoon';
+  font-size: 20px;
+  color: #76a7e1;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main > fieldset:nth-child(5) div label input:focus:invalid ~ div::before {
+  content: "\e904";
+  position: absolute;
+  top: 50%;
+  left: 270px;
+  transform: translateY(-50%);
+  font-family: 'icomoon';
+  font-size: 20px;
+  color: #e17776;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main > fieldset:nth-child(6) {
+  padding-top: 65px;
+}
+
+main > fieldset:nth-child(6) section:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+main > fieldset:nth-child(6) section:nth-child(1) label {
+  position: relative;
+  width: 30%;
+  height: 98px;
+  cursor: pointer;
+}
+
+main > fieldset:nth-child(6) section:nth-child(1) label:nth-child(1) input {
+  background: url("../img/payment-1.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+main > fieldset:nth-child(6) section:nth-child(1) label:nth-child(2) input {
+  background: url("../img/payment-2.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+main > fieldset:nth-child(6) section:nth-child(1) label:nth-child(3) input {
+  background: url("../img/payment-3.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+main > fieldset:nth-child(6) section:nth-child(1) label:not(:last-child) {
+  margin-right: 35px;
+}
+
+main > fieldset:nth-child(6) section:nth-child(1) label input {
+  all: unset;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+main > fieldset:nth-child(6) section:nth-child(1) label input:checked {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 7px #76a7e1;
+}
+
+main > fieldset:nth-child(6) section:nth-child(1) label input:checked::before {
+  content: "\e902";
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #76a7e1;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 80px;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label:nth-child(1) {
+  position: relative;
+  width: 50%;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label:nth-child(1)::before {
+  content: "\e901";
+  position: absolute;
+  right: 15px;
+  bottom: 7px;
+  font-size: 35px;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label:nth-child(2) {
+  width: 25%;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label:nth-child(3) {
+  width: 15%;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label span {
+  text-transform: uppercase;
+  padding: 0 0 13px 8px;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label input {
+  height: 50px;
+  padding: 15px;
+  border: 2px #eff0f5 solid;
+  border-radius: 4px;
+  text-align: center;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+main > fieldset:nth-child(6) section:nth-child(2) label input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main > fieldset:nth-child(7) {
+  padding: 110px 0 75px;
+  text-align: right;
+}
+
+main > fieldset:nth-child(7) button {
+  margin-left: 30px;
+}
+
+footer {
+  margin-top: 130px;
+  background: #444a62;
+  color: #b7bed8;
+}
+
+footer section {
+  max-width: 1140px;
+  padding: 100px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer section aside {
+  width: 25%;
+  padding-left: 40px;
+}
+
+footer section aside em {
+  line-height: 1.4;
+}
+
+footer section aside address {
+  margin: 15px 0;
+}
+
+footer section aside h2 {
+  position: relative;
+  margin-bottom: 25px;
+  color: #b7bed8;
+}
+
+footer section aside h2::before {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+footer section aside:nth-child(1) h2::before {
+  content: "\e909";
+}
+
+footer section aside:nth-child(2) h2::before {
+  content: "\e906";
+}
+
+footer section aside:nth-child(3) h2::before {
+  content: "\e90e";
+}
+
+footer section > a {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+footer a {
+  color: #b7bed8;
+}
+
+footer a:link {
+  color: #b7bed8;
+}
+
+footer li {
+  position: relative;
+  margin: 15px 0;
+}
+
+footer li::before {
+  position: absolute;
+  top: 50%;
+  left: -27px;
+  transform: translateY(-50%);
+  font-size: 10px;
+  color: #444A62;
+  pointer-events: none;
+  z-index: 2;
+}
+
+footer li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -31px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: #cdd4e3;
+  pointer-events: none;
+  z-index: 1;
+}
+
+footer li:nth-child(1)::before {
+  content: "\e908";
+}
+
+footer li:nth-child(2)::before {
+  content: "\e912";
+}
+
+footer li:nth-child(3)::before {
+  content: "\e90c";
+}
+
+footer li a {
+  margin-left: -31px;
+  padding-left: 31px;
+}
+
+footer li a:link {
+  color: #b7bed8;
+}
+
+footer li a:visited {
+  color: #b7bed8;
 }
 /*# sourceMappingURL=main.css.map */
