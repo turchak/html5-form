@@ -477,6 +477,20 @@ main > fieldset:nth-child(2) label input {
   opacity: 0;
 }
 
+main > fieldset:nth-child(2) label input:focus ~ span {
+  outline-color: #4d90fe;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+main > fieldset:nth-child(2) label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 main > fieldset:nth-child(2) div {
   padding: 30px 45px;
   border: 1px #ccd3e3 solid;
@@ -678,6 +692,12 @@ main > fieldset:nth-child(3) section div + button::before {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 15px;
+}
+
+main > fieldset:nth-child(3) section div + button:focus {
+  outline-color: #4d90fe;
+  outline-style: auto;
+  outline-width: 5px;
 }
 
 main > fieldset:nth-child(3)::before {
